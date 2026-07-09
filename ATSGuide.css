@@ -1,0 +1,254 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.ats-page {
+  min-height: 100vh;
+  background: #050505;
+  color: white;
+  font-family: "Segoe UI", sans-serif;
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* ── Layout ── */
+.container {
+  width: min(90%, 1100px);
+  margin-inline: auto;
+}
+
+.section {
+  padding: 100px 0;
+  position: relative;
+  z-index: 1;
+}
+
+/* ── Background Glow ── */
+.bg-glow {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.glow {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(150px);
+}
+
+.glow1 {
+  width: 500px;
+  height: 500px;
+  background: #3b82f6;
+  top: -100px;
+  left: -100px;
+  opacity: 0.4;
+}
+
+.glow2 {
+  width: 500px;
+  height: 500px;
+  background: #8b5cf6;
+  bottom: -150px;
+  right: -100px;
+  opacity: 0.4;
+}
+
+/* ── Hero ── */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.hero .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
+
+.hero h1 {
+  font-size: clamp(2.4rem, 5vw, 4rem);
+  line-height: 1.15;
+  max-width: 800px;
+}
+
+.gradient-text {
+  background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero p {
+  max-width: 680px;
+  color: #bdbdbd;
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+/* ── Section titles ── */
+.section-title {
+  text-align: center;
+  font-size: clamp(1.75rem, 3vw, 2.5rem);
+  margin-bottom: 50px;
+  line-height: 1.2;
+}
+
+/* ── Cards grid ── */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 24px;
+  align-items: stretch;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+  padding: 32px 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  transition: transform 0.25s ease, border-color 0.25s ease;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  border-color: #8b5cf6;
+}
+
+.card h3 {
+  color: #8b5cf6;
+  font-size: 1.05rem;
+}
+
+.card p {
+  color: #c9c9c9;
+  line-height: 1.7;
+  font-size: 0.95rem;
+}
+
+/* ── Score section ── */
+.score-section {
+  text-align: center;
+}
+
+.score-section .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 28px;
+}
+
+.score-circle {
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  background: conic-gradient(#3b82f6 0deg, #8b5cf6 270deg, #222 270deg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.inner-circle {
+  width: 170px;
+  height: 170px;
+  background: #090909;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+}
+
+.inner-circle h2 {
+  font-size: 3rem;
+  line-height: 1;
+}
+
+.inner-circle span {
+  color: #a3a3a3;
+  font-size: 0.9rem;
+}
+
+.score-description {
+  max-width: 640px;
+  color: #bdbdbd;
+  line-height: 1.75;
+  font-size: 1rem;
+}
+
+/* ── Steps ── */
+.steps {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.step {
+  background: rgba(255, 255, 255, 0.04);
+  border-left: 4px solid #8b5cf6;
+  border-radius: 0 16px 16px 0;
+  padding: 24px 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.step h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #fff;
+}
+
+.step p {
+  color: #c9c9c9;
+  line-height: 1.7;
+  font-size: 0.95rem;
+}
+
+/* ── Footer ── */
+.footer {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  padding: 40px;
+  color: #7d7d7d;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2.2rem;
+  }
+
+  .section-title {
+    font-size: 1.75rem;
+  }
+
+  .section {
+    padding: 64px 0;
+  }
+
+  .card {
+    padding: 24px 20px;
+  }
+
+  .step {
+    padding: 20px 20px;
+  }
+}
