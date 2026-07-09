@@ -51,27 +51,66 @@ ATSPro is a modern Resume Analyzer built using React, Express.js, and MongoDB. I
 ## Project Structure
 
 ```
-ATS_SCORE_CALCULATOR/
-│
-├── frontend/
-│   ├── src/
-│   │   ├── pages/
-│   │   ├── Dashboard.jsx
-│   │   ├── Login.jsx
-│   │   ├── Register.jsx
-│   │   ├── AccountPage.jsx
-│   │   └── ...
-│   │
-│   └── package.json
+## Project Structure
+
+ATS_Score_calculator/
 │
 ├── backend/
-│   ├── routes/
 │   ├── models/
+│   │   └── User.js
+│   │
+│   ├── routes/
+│   │   ├── auth.js
+│   │   ├── resume.js
+│   │   ├── localResumeParser.js
+│   │   └── ai.js
+│   │
 │   ├── uploads/
-│   ├── server.js
-│   └── package.json
+│   │
+│   ├── .env
+│   ├── package.json
+│   ├── package-lock.json
+│   └── server.js
 │
-└── README.md
+├── public/
+│
+├── src/
+│   ├── pages/
+│   │   ├── Dashboard.jsx
+│   │   ├── dashboard.css
+│   │   ├── Login.jsx
+│   │   ├── Login.css
+│   │   ├── Registration.jsx
+│   │   ├── registration.css
+│   │   ├── form.jsx
+│   │   ├── form.css
+│   │   ├── ReviewSubmit.jsx
+│   │   ├── profile.jsx
+│   │   ├── ATSGuide.jsx
+│   │   ├── ATSGuide.css
+│   │   ├── AboutInfo.jsx
+│   │   ├── PersonalInfo.jsx
+│   │   ├── EducationInfo.jsx
+│   │   ├── ExperienceInfo.jsx
+│   │   ├── skillsInfo.jsx
+│   │   └── skillsInfo.css
+│   │
+│   ├── App.jsx
+│   ├── main.jsx
+│   └── ...
+│
+├── node_modules/
+│
+├── .gitignore
+├── env.example
+├── eslint.config.js
+├── index.html
+├── package.json
+├── package-lock.json
+├── vite.config.js
+├── README.md
+└── SkillsInfo2.jsx
+
 ```
 
 ---
