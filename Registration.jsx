@@ -19,7 +19,15 @@ function Registration() {
 
 e.preventDefault();
 
+const passwordRegex =
+  /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,}$/;
 
+if (!passwordRegex.test(user.password)) {
+  alert(
+    "Password must be at least 8 characters long and contain at least one uppercase letter, one lowercase letter, and one number."
+  );
+  return;
+}
 if(user.password !== user.confirmPassword)
 {
     alert("Password does not match");
@@ -123,6 +131,7 @@ if(response.ok)
                         type="password"
                         placeholder="Create a password"
                         className="input_box"
+                         pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
                         onChange={(e)=>
                         setUser({...user,password:e.target.value})
                         }
@@ -134,6 +143,7 @@ if(response.ok)
                         type="password"
                         placeholder="Confirm your password"
                         className="input_box"
+                         pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
                           onChange={(e)=>
                             setUser({...user,confirmPassword:e.target.value})
                             }
