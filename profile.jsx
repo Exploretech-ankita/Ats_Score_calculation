@@ -549,19 +549,6 @@ const save = async(key,val)=>{
             <p className="syne" style={{ fontSize: 21, fontWeight: 700, color: T.textPrimary, marginBottom: 7, letterSpacing: "-0.01em" }}>
               {data.name}
             </p>
-            <span style={{
-              display: "inline-flex", alignItems: "center", gap: 5,
-              fontSize: 11.5, fontWeight: 600,
-              padding: "4px 13px", borderRadius: 999,
-              background: T.gradBadge,
-              border: "1px solid rgba(109,71,245,0.28)",
-              color: T.accentLight,
-              fontFamily: "'Syne', sans-serif",
-              letterSpacing: "0.04em",
-            }}>
-              <i className="ti ti-circle-check" style={{ fontSize: 12 }} />
-              VERIFIED
-            </span>
           </div>
         </div>
 
